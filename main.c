@@ -3,28 +3,40 @@
 #include<stdlib.h>
 #include<time.h>
 #include <string.h>
+#include<math.h>
 
-int ehPar(int n){
-    return n % 2 == 0;
+int buscar(float vetor[], int tamanho, float chave){
+    for(int i = 0; i < tamanho; i++){
+        if(vetor[i] == chave){
+            return i;
+        }
+    }
+    return -1;
 }
+
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-    int quantidade = 0;
-    int soma = 0;
+  
+  float numeros[] = {10.5, 20.5, 30.5, 40.5, 50.5};
 
-        printf("Pares de 1 a 20: \n");
-        for(int i = 1; i <= 20; i++){
-            if(ehPar(i)){
-                printf("%d ", i);
-                quantidade++;
-                soma += i;
-            }
-        }
+  int tamanho = 5;
 
-        printf("\nQuantidade: %d\n ", quantidade);
-        printf("Soma: %d\n ", soma);
+  float procurado;
+    printf("Digite o número que deseja procurar: ");
+    scanf("%f", &procurado);
+    int resultado = buscar(numeros, tamanho, procurado);
+
+    if(resultado != -1){
+        printf("Número encontrado! \n");
+        printf("Valor: %.2f\n", numeros[resultado]);
+        printf("Posição do vetor: %d\n", resultado);
+
+    }else{
+        printf("Número não encontrado!\n");
+    }
+
 
     return 0;
 }
