@@ -20,6 +20,11 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
+    float idade = lerPositivo("Digite a idade: \n");
+    float peso = lerPositivo("Digite o peso(kg): \n");
+    float altura = lerPositivo("Digite a altura (m): \n");
+    printf("\nIdade: %.0f anos\n", idade);
+    printf("IMC: %f\n", peso / (altura * altura));
 
 
 
