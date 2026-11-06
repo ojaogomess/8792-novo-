@@ -5,14 +5,11 @@
 #include <string.h>
 #include<math.h>
 
-void tabuada(int numero, int contador){
-    if(contador > 10){
-        return;
+int contarDigitos(int numero){
+    if(numero < 10){
+        return 1;
     }
-    printf("%d x %d = %d\n", numero, contador, numero * contador);
-
-
-    tabuada(numero, contador + 1);
+    return 1 + contarDigitos(numero / 10);
 }
 
     
@@ -20,12 +17,7 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-
-    
-    int numero;
-    printf("Digite um número: ");
-    scanf("%d", &numero);
-    tabuada(numero, 1);
+    printf("Quantidade: %d\n", contarDigitos(4567));
 
     return 0;
 }
