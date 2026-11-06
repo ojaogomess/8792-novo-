@@ -5,23 +5,24 @@
 #include <string.h>
 #include<math.h>
 
-void contagem(int n){
-    if(n == 0){
-        printf("Fogo!\n");
-        return;
-    }
-    printf("%d\n", n);
-    contagem(n - 1);
-}
 
+    int fatorial(int numero){
+        if(numero == 0 || numero == 1){
+            return 1;
+        }
+        return numero * fatorial(numero - 1);
+    }
+
+    
 
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
+    int resultado = fatorial(5);
+    printf("Fatorial: %d\n", resultado);
 
-    contagem(5);
     
 
 
