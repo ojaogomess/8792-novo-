@@ -5,11 +5,11 @@
 #include <string.h>
 #include<math.h>
 
-int contarDigitos(int numero){
-    if(numero < 10){
-        return 1;
+int somarDigitos(int numero){
+    if(numero == 0){
+        return 0;
     }
-    return 1 + contarDigitos(numero / 10);
+    return (numero % 10) + somarDigitos(numero / 10);
 }
 
     
@@ -17,7 +17,7 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("Quantidade: %d\n", contarDigitos(4567));
+    printf("Soma: %d\n", somarDigitos(1234));
 
     return 0;
 }
