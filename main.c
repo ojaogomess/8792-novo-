@@ -5,23 +5,22 @@
 #include <string.h>
 #include<math.h>
 
-float areaRetangulo(float base, float altura){
-    return base * altura;
+float celsiusParaFahrenheit(){
+    float celsius;
+    printf("Digite a temperatura em Celsius: \n");
+    scanf("%f", &celsius);
+    return celsius * 9 / 5 + 32;
 }
 
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-    float altura, base;
+ 
+    float Fahrenheit;
 
-        printf("Digite um valor pra base: \n");
-        scanf("%f", &base);
-        printf("Agora um valor para a altura: \n");
-        scanf("%f", &altura);
-
-
-    printf(" %.2f\n", areaRetangulo(base, altura));
+    Fahrenheit = celsiusParaFahrenheit();
+    printf("Temperatura em Fahrenheit: %.1f\n", Fahrenheit);
 
     return 0;
 }
