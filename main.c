@@ -5,22 +5,24 @@
 #include <string.h>
 #include<math.h>
 
-float celsiusParaFahrenheit(){
-    float celsius;
-    printf("Digite a temperatura em Celsius: \n");
-    scanf("%f", &celsius);
-    return celsius * 9 / 5 + 32;
-}
+int soma(int n){
+    int total = 0;
+    for(int i = 0; i < n; i++){
+    total += i;
 
+    }
+    
+
+}
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
- 
-    float Fahrenheit;
+int numero;
+printf("digite um numero");
+scanf("%d", &numero); 
 
-    Fahrenheit = celsiusParaFahrenheit();
-    printf("Temperatura em Fahrenheit: %.1f\n", Fahrenheit);
+printf("\nSoma de 1 até ...  %d\n", soma(numero));
 
     return 0;
 }
