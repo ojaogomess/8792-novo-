@@ -5,27 +5,20 @@
 #include <string.h>
 #include<math.h>
 
-int palindromo(char palavra[], int inicio, int fim){
-    if(inicio >= fim){
-        return 1;
+
+void contagem(int n){
+    for(int i = n; i >= 1; i--){
+        printf("%d\n", i);
     }
-    if (palavra[inicio] != palavra[fim]){
-        return 0;
-    }
-    return palindromo(palavra, inicio + 1, fim - 1);
+    printf("BUM!");
 }
-    
+
+
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    char palavra[50] = "radar";
-    if(palindromo(palavra, 0, strlen(palavra) - 1)){
-        printf("É palíndromo!\n");
-    }else{
-        printf("Não é palíndromo!\n");
-    }
-    
+contagem();
 
     return 0;
 }
