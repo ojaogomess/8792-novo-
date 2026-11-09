@@ -13,8 +13,15 @@ float areaRetangulo(float base, float altura){
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
+    float altura, base;
 
-    printf(" %.2f\n", areaRetangulo(5, 3));
+        printf("Digite um valor pra base: \n");
+        scanf("%f", &base);
+        printf("Agora um valor para a altura: \n");
+        scanf("%f", &altura);
+
+
+    printf(" %.2f\n", areaRetangulo(base, altura));
 
     return 0;
 }
