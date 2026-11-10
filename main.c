@@ -5,20 +5,26 @@
 #include <string.h>
 #include<math.h>
 
-int potencia(int base, int expoente){
-    int resultado = 1;
-    for(int i = 0; i < expoente; i++){
-        resultado *= base;
+int somaDigitos(int n){
+    int soma = 0;
+    while(n != 0){
+        soma += n % 10;
+        n /= 10;
     }
-    return resultado;
+    return soma;
 }
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("2 Elevado a 5 = %d\n", potencia(2,5));
- 
+int n;
+
+    printf("Digite digitos: \n");
+        scanf("%d", &n);
+
+    printf("Soma dos dígitos é: %d\n", somaDigitos(n));
+    
     return 0;
 }
 
