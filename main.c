@@ -5,34 +5,29 @@
 #include <string.h>
 #include<math.h>
 
-int quadrado(int n){
-    return n * n;
-}
+int maiorDeTres(int a, int b, int c){
+    int maior = a;
 
-int cubo(int n){
-    return n*n*n;
-}
+    if(b > maior){
+        maior = b;
+    }
 
+    if(c > maior){
+        maior = c;
+    }
+    return maior;
+}
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-int cuboValor;
-int quadradoValor;
 
-    printf("Digite um valor para ver seu quadrado: \n");
-        scanf("%d", &quadradoValor);
+int valor1, valor2, valor3;
 
-            printf("Digite um valor para ver seu cubo: \n");
-        scanf("%d", &cuboValor);
+printf("Digite tres números: ");
+scanf("%d\n%d\n%d", &valor1, &valor2, &valor3);
 
-    printf("\nQuadrado de %d é: %d\n", quadradoValor, quadrado(quadradoValor));
+printf("Maior: %d", maiorDeTres(valor1, valor2, valor3));
 
-    printf("Cubo de %d é: %d", cuboValor, cubo(cuboValor));
-
-
-    
-
-    
     return 0;
 }
 
