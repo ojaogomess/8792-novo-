@@ -5,25 +5,33 @@
 #include <string.h>
 #include<math.h>
 
-int somaDigitos(int n){
-    int soma = 0;
-    while(n != 0){
-        soma += n % 10;
-        n /= 10;
-    }
-    return soma;
+int quadrado(int n){
+    return n * n;
+}
+
+int cubo(int n){
+    return n*n*n;
 }
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
+int cuboValor;
+int quadradoValor;
 
-int n;
+    printf("Digite um valor para ver seu quadrado: \n");
+        scanf("%d", &quadradoValor);
 
-    printf("Digite digitos: \n");
-        scanf("%d", &n);
+            printf("Digite um valor para ver seu cubo: \n");
+        scanf("%d", &cuboValor);
 
-    printf("Soma dos dígitos é: %d\n", somaDigitos(n));
+    printf("\nQuadrado de %d é: %d\n", quadradoValor, quadrado(quadradoValor));
+
+    printf("Cubo de %d é: %d", cuboValor, cubo(cuboValor));
+
+
+    
+
     
     return 0;
 }
