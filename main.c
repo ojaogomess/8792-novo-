@@ -10,16 +10,19 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
-    printf("Digite N: \n");
-    scanf("%d", &n);
-
-    for(int i = 1; i <= n; i++){
-        for(int j = 1; j <= n; j++){
-            printf("* ");
-        }
-        printf("\n");
+    int soma = 0;
+   
+    for(int i = 10; i <= 99; i++){
+        int dezena = i / 10;
+        int unidade = i % 10;
+        if(dezena == unidade){
+            printf("%d\n", i);
+            
+        }  
+            
     }
+ 
+
 
 
     return 0;
