@@ -10,18 +10,20 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    
-   int total = 0;
+    int soma;
+    int total = 0;
     for(int i = 10; i <= 99; i++){
         int dezena = i / 10;
         int unidade = i % 10;
-        if(unidade > dezena){
+        if(unidade == dezena * 2){
+            printf("%d\n", i);
             total++;
+            soma += i;
             
         }
 
     }
-    printf("Números com unidade maior que a dezena: %d\n", total);
+    printf("soma: %d\nNúmeros com unidade maior que a dezena: %d\n", soma, total);
 
     
             
