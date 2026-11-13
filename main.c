@@ -12,18 +12,15 @@ int main() {
 
     int soma;
     int total = 0;
-    for(int i = 10; i <= 99; i++){
-        int dezena = i / 10;
-        int unidade = i % 10;
-        if(unidade == dezena * 2){
+    for(int i = 1; i <= 100; i++){
+        if(i % 4 == 0){
             printf("%d\n", i);
-            total++;
-            soma += i;
+           
             
         }
-
+    
     }
-    printf("soma: %d\nNúmeros com unidade maior que a dezena: %d\n", soma, total);
+
 
     
             
